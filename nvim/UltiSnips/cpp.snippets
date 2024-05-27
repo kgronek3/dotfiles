@@ -1,0 +1,201 @@
+# Template
+snippet template "Template" bA
+#include <iostream>
+$1
+int main()
+{
+	$0
+}
+endsnippet
+
+# Template - Algorithms For Data Science
+snippet AFDS "Template for AFDS" bA
+#include <iostream>
+#include <vector>
+$1
+int main()
+{
+	$0
+}
+endsnippet
+
+# IO
+snippet incl "Include library" bA
+#include <${1:Library}>
+$0
+endsnippet
+
+snippet cin "cin" bA
+std::cin >> $1;$0
+endsnippet
+
+snippet cout "cout" bA
+std::cout << $0
+endsnippet
+
+snippet endl "endl" A
+<< std::endl;$0
+endsnippet
+
+snippet return "return value" A
+return ${1:Object};$0
+endsnippet
+
+snippet coml "Comment line" b
+// ${1:Comment Text}
+$0
+endsnippet
+
+snippet comb "Comment block" b
+/* ${1:Comment Text} */
+$0
+endsnippet
+
+# Variable initialization
+snippet init "Variable of specified type" b
+${1:Type} ${2:Initialization function};$0
+endsnippet
+
+snippet int "Variable of type int" b
+int $1;$0
+endsnippet
+
+snippet double "Variable of type double" b
+double $1;$0
+endsnippet
+
+snippet char "Variable of type char (stala znakowa)" b
+char $1;$0
+endsnippet
+
+snippet char* "Variable of type char* (stala napisowa)" b
+char* $1;$0
+endsnippet
+
+# Control flow
+snippet sif "Simple if statement"
+if (${1:Condition})
+	${2:Instructions};
+$0
+endsnippet
+
+snippet if "If statement"
+if (${1:Condition})
+{
+	${2:Instructions}
+}
+$0
+endsnippet
+
+snippet sifel "Simple if-Else statement"
+if (${1:Condition})
+	${2:If true};
+else
+	${3:If false};
+$0
+endsnippet
+
+snippet ifel "If-Else statement"
+if (${1:Condition})
+{
+	${2:If true}
+}
+else
+{
+	${3:If false}
+}
+$0
+endsnippet
+
+snippet switch "Switch case"
+switch (${1:Variable})
+{
+case ${2:Input}:
+	${3:Output if variable is the input};
+	break;$4
+default:
+	${5:Default output};
+}
+$0
+endsnippet
+
+snippet tern "Ternary operator"
+${1:Condition} ? ${2:If true} : ${3:If false};$0
+endsnippet
+
+# Loops
+snippet swhile "Simple while loop"
+while (${1:Condition})
+	${2:Instructions};
+$0
+endsnippet
+
+snippet while "While loop"
+while (${1:Condition})
+{
+	${2:Instructions}
+}
+$0
+endsnippet
+
+snippet sfor "Simple for loop"
+for (${1:Declaration}; ${2:Condition}; ${3:Expression})
+	${4:Instructions};
+$0
+endsnippet
+
+snippet for "For loop"
+for (${1:Declaration}; ${2:Condition}; ${3:Expression})
+{
+	${4:Instructions}
+}
+$0
+endsnippet
+
+snippet do "Do loop"
+do {
+	${1:Instructions}
+} while (${2:Condition})
+$0
+endsnippet
+
+# Functions
+snippet main "Void function" bA
+int main ()
+{
+	${3:Instructions}
+}
+$0
+endsnippet
+
+snippet void "Void function" bA
+void ${1:Function name}(${2:Arguments})
+{
+	${3:Instructions}
+}
+$0
+endsnippet
+
+snippet f "Function declaration"
+${1:Function type} ${2:Function name}(${3:Arguments})
+{
+	${4:Instructions}
+}
+$0
+endsnippet
+
+# Classes
+snippet class "Class declaration" b
+class ${1:Class Name}
+{
+private:
+${2:Private fields}
+
+public:
+${3:Public fields}
+
+};
+$0
+endsnippet
+
+

@@ -1,0 +1,68 @@
+# Shebang
+snippet #! "Python shebang" bA
+#!/usr/bin/env python3
+$0
+endsnippet
+
+# Includes
+snippet impor "Load library" bA
+import ${1:Library} as ${2:Alias}
+$0
+endsnippet
+
+# Functions
+snippet f "Function declaration" i
+def ${1:Function name}(${2:Arguments}):
+	${3:Instructions}
+end
+$0
+endsnippet
+
+snippet lambda "Lambda anonymous function" i
+${1:Function name} = lambda ${2:Argument} : ${3:Transformation}
+$0
+endsnippet
+
+# Control Flow
+snippet if "If statement"
+if ${1:Condition}:
+	${2:Instructions}
+$0
+endsnippet
+
+snippet ifel "If-Else statement"
+if ${1:Condition}:
+	${2:If true}
+else:
+	${3:If false}
+$0
+endsnippet
+
+snippet elif "Else if" A
+elif:
+	$1
+$0
+endsnippet
+
+snippet tern "Ternary operator"
+${2:Value if true} if ${1:Condition} else ${3:value if false}$0
+endsnippet
+
+snippet while "While loop"
+while ${1: Condition}:
+	${2:Instructions}
+$0
+endsnippet
+
+snippet for "For loop"
+for ${1:Iterator} in ${2:Iterable container}:
+	${3:Instructions}
+$0
+endsnippet
+
+snippet fornest "Nested for loop"
+for ${1:Iter1}, ${2:Iter2} in ${3:Container}:
+	${4:Instructions}
+$0
+endsnippet
+

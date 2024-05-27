@@ -1,0 +1,118 @@
+# Shebang
+snippet #! "Julia shebang" bA
+#!/usr/bin/env julia
+$0
+endsnippet
+
+# Includes
+snippet usin "Load package" bA
+using ${1:Package}
+$0
+endsnippet
+
+snippet incl "Include source code" bA
+include("$1")
+$0
+endsnippet
+
+# Functions
+snippet f "Function declaration" i
+function ${1:Function name}(${2:Arguments})
+	${3:Instructions}
+end
+$0
+endsnippet
+
+snippet cf "Compact function declaration"
+${1:Function name}(${2:Arguments}) = ${3:Instructons}
+$0
+endsnippet
+
+snippet af "Anonymous function declaration"
+${1:Arguments} -> ${2:Return values}$0
+endsnippet
+
+# Control Flow
+snippet beg "Block of code"
+begin
+	${1:Instructions}
+end
+$0
+endsnippet
+
+snippet if "If statement"
+if ${1:Condition}
+	${2:Instructions}
+end
+$0
+endsnippet
+
+snippet ifel "If-Else statement"
+if ${1:Condition}
+	${2:If true}
+else
+	${3:If false}
+end
+$0
+endsnippet
+
+snippet tern "Ternary operator"
+${1:Condition} ? ${2:If true} : ${3:If false}$0
+endsnippet
+
+snippet while "While loop"
+while ${1:left} ${2|<,<=,>,>=,==,!=|} ${3:right}
+	${4:Instructions}
+end
+$0
+endsnippet
+
+snippet for "Standard for loop"
+for ${1:Iterator} = ${2:Range} 
+	${3:Instructions}
+end
+$0
+endsnippet
+
+snippet forc "For loop over iterable container"
+for ${1:Iterator} ${2|in,∈|} ${3:Iterable container} 
+	${4:Instructions}
+end
+$0
+endsnippet
+
+snippet fornest "Nested for loop"
+for ${1:Iter1} = ${2:Range1}, ${3:Iter2} = ${4:Range2}
+	${5:Instructions}
+end
+endsnippet
+
+snippet pl "Plot template" w
+plot($1, $2, seriestype = $3)$0
+endsnippet
+
+snippet sp "Scatter plot"
+plot($1, $2, seriestype = :scatter)$0
+endsnippet
+
+# Special functions and methods
+snippet pr "Print function"
+print(${1:text})$0
+endsnippet
+
+snippet prl "Print function"
+println(${1:text})$0
+endsnippet
+
+snippet ret "Return value" i
+return(${1:Return Value})$0
+endsnippet
+
+snippet m "Map function"
+map(${1:${VISUAL:Arguments}}, ${2:Mapping arguments})
+endsnippet
+
+# Utility functions
+snippet threads "Print number of threads online"
+Threads.nthreads()
+endsnippet
